@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="./src/css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./src/css/main.css">
+</head>
+<body>
+<div class="container">
+	<div class="search">
+		<div class="row">
+		    <div class="input-group">
+		      <input type="text" id="msg" class="form-control" placeholder="请输入要查找的人">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button" id="search">搜索</button>
+				<button type="button" class="btn btn-default" id="addMember">新增家庭成员</button>
+		      </span>
+		    </div>
+		</div>
+	</div>
+
+	<table class="table table-hover mt30">
+		<thead>
+			<tr>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>性别</th>
+				<th>公司</th>
+				<th>收入</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody id="renderToBody"></tbody>
+	</table>
+</div>
+	<script type="text/javascript" src="./src/js/common/jquery.min.js"></script>
+	<script type="text/javascript">
+    var require = {
+        baseUrl: "./",
+        paths: {
+            'controller': './dist/js/controller',
+        }
+    }
+	</script>
+	<script type="text/x-handlebars-template" id="renderTemp">
+		{{#each data}}
+			<tr>
+				<td>{{name}}</td>
+				<td>{{age}}</td>
+				<td>{{sex}}</td>
+				<td>{{company}}</td>
+				<td>{{income}}</td>
+				<td>
+					<a href="javascript:void(0);" class='delete' data-id={{id}}>删除</a>
+					<a href="javascript:void(0);" class='update' data-id={{id}}>更新</a>
+				</td>
+			</tr>
+		{{/each }}
+	</script>
+	
+	<script type="text/javascript" src='./dist/js/common/handlebars.min.js'></script>
+	<script src="./src/js/common/require.js" data-main="./dist/js/index.js"></script>
+</body>
+</html>

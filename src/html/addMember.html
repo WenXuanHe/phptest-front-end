@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>addMember</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.css">
+	<style type="text/css">
+		.w200{
+			width: 500px;
+		}
+		.ml100{
+			margin-left: 100px;
+		}
+	</style>
+</head>
+<body>	
+<form class="form-horizontal w200 form">
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">姓名</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="name" id="name" placeholder="请输入姓名">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">年龄</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" name="age" id="age" placeholder="请输入年龄">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="company" class="col-sm-2 control-label">公司</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="company" id="company">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="income" class="col-sm-2 control-label">收入</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" name="income" id="income">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="birth" class="col-sm-2 control-label">出生日期</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" name="birth" id="birth">
+    </div>
+  </div>
+  <div class="ml100">
+
+  	<label class="radio-inline">
+	  <input type="radio" name="sex" id="inlineRadio1" value="M"> 男
+	</label>
+	<label class="radio-inline">
+	  <input type="radio" name="sex" id="inlineRadio2" value="F"> 女
+	</label>
+  </div>
+	 <div class="ml100">
+	 	  <button type="button" class="btn btn-primary" id="add">保存</button>
+	 </div>
+
+</form>
+</body>
+<script type="text/javascript" src="../js/common/jquery.min.js"></script>
+<script type="text/javascript" src='../../dist/js/common/handlebars.min.js'></script>
+<script src="../js/common/require.js" data-main="../../dist/js/add.js"></script>
+</html>
